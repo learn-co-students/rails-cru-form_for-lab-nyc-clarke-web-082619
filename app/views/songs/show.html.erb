@@ -1,0 +1,10 @@
+<h1><%= @song.name %></h1>
+
+
+<% @artist = Artist.find(@song.artist_id) %>
+<% @genre = Genre.find(@song.genre_id) %>
+
+
+<%=  link_to @artist.name, artist_path(@artist), mehtod: :show %>
+<%=  link_to @genre.name, genre_path(@genre), mehtod: :show  %>
+
